@@ -55,7 +55,7 @@ The steps to execute the code are-
 11. Step 12 creates several bootstrap samples to estimate the confidence intervals for the differences in costs between the treatment and control groups. Go to `rprogs` and find the script named `main_part2.R`. Execute this R script to get the confidence intervals for the differences in costs between the two groups.
 
 ## Output
-Final results, cost tables and plots would be available in the folder `./output/`. Detailed outputs for each step in the execution can be obtained from [Readme- Social Housing Code Review.docx](https://github.com/nz-social-investment-unit/social_housing/blob/master/Readme-%20Social%20Housing%20Code%20Review.docx)
+Final results, cost tables and plots would be available in the folder `./output/`. Detailed outputs for each step in the execution can be obtained from [Social_Housing_Code_Notes.docx](https://github.com/nz-social-investment-unit/social_housing/blob/master/Social_Housing_Code_Notes.docx)
 	
 
 ## Known Issues
