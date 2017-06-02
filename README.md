@@ -1,9 +1,9 @@
-# social_housing
+# Social Housing Analysis v1.0.0
 Repository for the code required to run the Social Housing analysis end-to-end.
 
 
 ## Overview
-
+This repository contains all the code required to run the analysis accompanying the [Social Housing Report], published by the Social Investment Unit dated 02 June 2017.
 
 
 ## Pre-requisites
