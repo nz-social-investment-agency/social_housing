@@ -51,7 +51,7 @@ HISTORY:
 %let si_price_index_type = CPI;					/* type of inflation adjustment*/
 %let si_price_index_qtr = 2016Q2;				/* reference Quarter to which Inflation adjustment is to be done */
 %let si_discount = True;						/* specify if discounting is to be done */
-%let si_discount_rate = 3;						/* specify discounting rate(value is ignored if si_discount = False) */
+%let si_discount_rate = 5;						/* specify discounting rate(value is ignored if si_discount = False) */
 
 
 /* rollup flags */

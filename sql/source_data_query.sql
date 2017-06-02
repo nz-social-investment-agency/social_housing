@@ -97,6 +97,6 @@ select
 	,[hnz_re_exit_status_text]
 	,case when [hnz_re_exit_status_text] = 'HOUSED' then 1 else 0 end as actual_class
 	,[Group]
-from [DL-MAA2016-15].sh_pop_0506 hh
+from <target_schema>.sh_pop_0506 hh
 	left join IDI_Clean.data.address_notification addr 
 on (hh.primary_snz_uid =addr.snz_uid and hh.hnz_na_date_of_application_date between addr.[ant_notification_date] and addr.[ant_replacement_date])
