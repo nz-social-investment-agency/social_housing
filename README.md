@@ -22,6 +22,15 @@ Repository for the code required to run the Social Housing analysis end-to-end.
  
 
 ## Executing the Code
+
+The Social Housing Analysis code consists of SAS programs and macros (in ./sasprog/ and ./sasauto/ folders), R programs (in ./rprogs/) and SQL scripts (in /sql/). The code execution is divided into 12 discrete chunks as listed in the sh_main.sas script. Following are the steps required to execute the code end-to-end. This 12-step process has to be run in 4 parts, switching between SAS and R:
+	* SAS: sh_main.sas from 1 to the step 9 (create train/test dataset)  
+	* R: main_part1.R (propensity model)  
+	* SAS: sh_main.sas from 10 to step 11 (import scores and create cost table)  
+	* R: main_part2.R (cost analysis)  
+
+The steps to execute the code are-
+
 1. Ensure that the prerequisites are all available in your project folder and schema- 
 	* You need to have downloaded the [social investment analytical layer (SIAL)](https://github.com/nz-social-investment-unit/social_investment_analytical_layer) which is a framework of tables and views that the social housing code uses to perform the analysis. These SIAL tables and views should be available in your project schema prior to running the  social housing analysis code. Refer to the README in the [social investment analytical layer repository](https://github.com/nz-social-investment-unit/social_investment_analytical_layer) for instructions on how to download and install the SIAL on your project schema. ** Important: When you run the social investment analytical layer installation, ensure that it uses the same IDI refresh version that the social housing analysis is to be performed on. ** For example, if you want the social housing analysis to run on the IDI_Clean_20161020, then the social_investment_analytical_layer should also use IDI_Clean_20161020. 
 	* You need to have downloaded the [si_data_foundation](https://github.com/nz-social-investment-unit/social_investment_data_foundation) and it should be available for use in your project folder. You do not need to run this code; just ensure that these are stored somewhere in the project folder alloted to you in the IDI.
@@ -29,7 +38,7 @@ Repository for the code required to run the Social Housing analysis end-to-end.
 3. Unzip the files into your project folder.
 4. Navigate to the `sasautos` folder under social_housing, and find the SAS script named "sh_si_setup.sas". Open this script in SAS Enterprise Guide. This is the script that is used to set up some universal parameters for the analysis.
 	* Find the variable named `si_proj_schema`. This should be assigned the target schema name, where the output tables of the social housing analysis would be written into.  
-	* There are other parameters like the discounting rates and whether inflation should be applied to costs and so on. You can either use the default values already supplied for these, or edit these to choose your own values. Use this set of parameters to customise the analysis to your needs.
+	* There are other parameters like the discounting rates, windowing parameters (profile and forecasting periods) and whether inflation should be applied to costs and so on. You can either use the default values already supplied for these, or edit these to choose your own values. Use this set of parameters to customise the analysis to your needs.
 5. Navigate to the `sql` folder under social_housing, and open `source_data_query.sql` and `source_cost_table.sql`. Replace the reference to <target_schema> with your project schema name.
 6. Navigate to the `sasprogs` folder under social_housing, and find the script called "sh_main.sas". This is the main script that runs the analysis end-to-end. Open this script in SAS Enterprise Guide. Notice that the main script has named "sections", each of which perform a specific task.
 	* Go to the section named "1.SET UP VARIABLES AND MACROS". This is where you will set up the required variables for your analysis. 
@@ -45,8 +54,11 @@ Repository for the code required to run the Social Housing analysis end-to-end.
 11. Step 12 creates several bootstrap samples to estimate the confidence intervals for the differences in costs between the treatment and control groups. Go to `rprogs` and find the script named `main_part2.R`. Execute this R script to get the confidence intervals for the differences in costs between the two groups.
 
 ## Output
+Final results, cost tables and plots would be available in the folder `./output/`. Detailed outputs for each step in the execution can be obtained from [Readme- Social Housing Code Review.docx] (https://github.com/nz-social-investment-unit/social_housing/blob/master/Readme-%20Social%20Housing%20Code%20Review.docx)
+	
 
 ## Known Issues
+IDI_Clean refresh dated 2017 Quarter 1 has lacks data before 2014 due to an error in the refresh. This is expected to be fixed in the next IDI refresh.
 
 ## Getting Help:
 For more help/guidance in running the SIAL, email info@siu.govt.nz
