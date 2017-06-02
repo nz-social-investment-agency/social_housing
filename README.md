@@ -51,7 +51,7 @@ The steps to execute the code are-
 	* Execute the section `2.DEFINE THE COHORT (2005/2006 HNZ APPLICATIONS)` to create the population of interest.
 8. Now you are ready to create all the variables required for the analysis. Execute steps 3 to 9 sequentially to create the final analysis-ready dataset.
 9. Next, you need to perform the propensity matching to identify the treatment and control groups for the analysis. For this, navigate to the `rprogs` folder under the project, and find the script named `main_part1.R`. This executes all the required analysis to create the weighted and matched treatment and control groups to perform a comparative analysis between those who receive social housing and those who applied but did not receive it. Note that the weighting is only performed for the control group, as the intended analysis for this dataset is to perform the Average Treatment Effect for the Treated(ATET).
-10. Next, you are going to construct the weighted costs that are the point of comparison between the treatment and control groups after the treatment. Go back to "sh_main.sas", and look at step 10. This loads the output from propensity matching model into SAS. Execute step 10 and 11 for creating the costs for both groups after the treatment application. 
+10. Next, you are going to construct the weighted costs that are the point of comparison between the treatment and control groups after the treatment. Go back to `sh_main.sas`, and look at step 10. This loads the output from propensity matching model into SAS. Execute step 10 and 11 for creating the costs for both groups after the treatment application. 
 11. Step 12 creates several bootstrap samples to estimate the confidence intervals for the differences in costs between the treatment and control groups. Go to `rprogs` and find the script named `main_part2.R`. Execute this R script to get the confidence intervals for the differences in costs between the two groups.
 
 ## Output
@@ -59,7 +59,7 @@ Final results, cost tables and plots would be available in the folder `./output/
 	
 
 ## Known Issues
-IDI_Clean refresh dated 2017 Quarter 1 has lacks data before 2014 due to an error in the refresh. This is expected to be fixed in the next IDI refresh.
+1. IDI_Clean refresh made on 2017 April has lacks data before 2014 due to an error in the refresh. This is expected to be fixed in the next IDI refresh.
 
 ## Getting Help:
 For more help/guidance in running the SIAL, email info@siu.govt.nz
