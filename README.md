@@ -1,6 +1,8 @@
 # Social Housing Analysis v1.0.0
 Repository for the code required to run the Social Housing analysis end-to-end.
 
+Note the coding style of this test case has been critiqued. You can read the blog [here](https://github.com/nz-social-investment-agency/sia_analytical_processes).
+
 
 ## Overview
 This repository contains all the code required to run the analysis accompanying the [Social Housing Report], published by the Social Investment Unit dated 02 June 2017.
