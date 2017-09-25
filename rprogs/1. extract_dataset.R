@@ -16,7 +16,7 @@ print("Running extract_dataset.R");
  connstr <- set_conn_string()
 
 # Read the sql query file and create query
-app_data_query <- file("../sql/source_data_query.sql","r")
+app_data_query <- "../sql/source_data_query.sql"
 
 
 # Run Housing applications data query on the database and fetch dat

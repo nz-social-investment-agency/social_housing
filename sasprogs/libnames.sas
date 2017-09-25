@@ -130,6 +130,3 @@ libname sandind ODBC dsn=idi_sandpit_srvprd schema="clean_read_INDICATORS";
 libname sandcen ODBC dsn=idi_sandpit_srvprd schema="clean_read_cen";
 libname sandcyf ODBC dsn=idi_sandpit_srvprd schema="clean_read_cyf";
 libname sandmoe ODBC dsn=idi_sandpit_srvprd schema="clean_read_moe";
-
-/* personal area for tables */
-libname al "\\WPRDFS08\Datalab-MA\MAA2016-15 Supporting the Social Investment Unit\Analytical layer\Events\R";

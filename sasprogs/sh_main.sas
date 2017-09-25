@@ -38,9 +38,9 @@ HISTORY:
 
 /******************************* 1.SET UP VARIABLES AND MACROS ********************************************/
 
-/*options mlogic mprint;*/
+options mlogic mprint;
 
-/* Set the paths to the social housing code folder and the si data foundation folder */
+/* Set the path */
 %let sasdir = \\WPRDFS08\path\to\social_housing_folder; /* Example- \\WPRDFS08\Datalab-MA\MAA2016-15 Supporting the Social Investment Unit\github_social_housing_v2*/
 %let sasdirgen = \\WPRDFS08\path\to\si_data_foundation_folder; /* Example- \\WPRDFS08\Datalab-MA\MAA2016-15 Supporting the Social Investment Unit\si_data_foundation*/
 
