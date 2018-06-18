@@ -5,7 +5,7 @@ Note the coding style of this test case has been critiqued. You can read the blo
 
 
 ## Overview
-This repository contains all the code required to run the analysis accompanying the [Social Housing Report], published by the Social Investment Unit dated 02 June 2017.
+This repository contains all the code required to run the analysis accompanying the [Social Housing Report](https://sia.govt.nz/assets/Uploads/sh-technical-report.pdf), published by the Social Investment Unit dated 02 June 2017.
 
 ## License for Social Housing Content
 [![License: CC BY SA 4.0](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/)
