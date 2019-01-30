@@ -75,10 +75,6 @@ The steps to execute the code are-
 ## Output
 Final results, cost tables and plots would be available in the folder `./output/`. Detailed outputs for each step in the execution can be obtained from [Social_Housing_Code_Notes.docx](https://github.com/nz-social-investment-unit/social_housing/blob/master/Social_Housing_Code_Notes.docx)
 	
-
-## Known Issues
-1. IDI_Clean refresh on 2017 April has lacks data before 2014 due to an error in the refresh. This is expected to be fixed in the next IDI refresh.
-
 ## Getting Help:
 For more help/guidance in running the SIAL, email info@siu.govt.nz
 
